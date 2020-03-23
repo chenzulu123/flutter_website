@@ -25,21 +25,9 @@ class _LoadingPageState extends State<LoadingPage> {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Stack(
-          children: <Widget>[
-            Image.asset(
-              'assets/images/loading.jpg',
-              fit: BoxFit.cover,
-            ),
-            Center(
-              child: Text('Flutter启动页',
-                  style: TextStyle(
-                      fontSize: 36,
-                      color: Colors.white,
-                      //去除文字边线
-                      decoration: TextDecoration.none)),
-            ),
-          ],
+        child: Image.asset(
+          'assets/images/loading.jpg',
+          fit: BoxFit.cover,
         ),
       ),
     );
