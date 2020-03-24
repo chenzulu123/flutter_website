@@ -32,8 +32,8 @@ class ProductList extends StatelessWidget {
                 builder: (context) => ProductDetail(post: item)));
           },
           child: Container(
-            width: itemWidth,
-            margin: EdgeInsets.only(left: 5, bottom: 10),
+            // width: itemWidth,
+            margin: EdgeInsets.only(bottom: 16),
             padding: EdgeInsets.all(10),
             color: bgColor,
             child: Column(
@@ -42,7 +42,7 @@ class ProductList extends StatelessWidget {
                 Text(
                   item.title,
                   maxLines: 1,
-                  style: TextStyle(fontSize: 16),
+                  style: Theme.of(context).textTheme.title,
                   // 超出隐藏
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -52,7 +52,7 @@ class ProductList extends StatelessWidget {
                 Text(
                   item.author,
                   maxLines: 1,
-                  style: TextStyle(fontSize: 12),
+                  style: Theme.of(context).textTheme.subhead,
                   // 超出隐藏
                   overflow: TextOverflow.ellipsis,
                 ),
