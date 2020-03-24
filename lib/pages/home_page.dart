@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../widget/home_banner.dart';
+import '../widget/product_list.dart';
 
 // 主页面
 class HomePage extends StatefulWidget {
@@ -12,9 +14,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text("HomePage"),
+    return Scaffold(
+      body: ListView(
+        children: <Widget>[
+          HomeBanner(),
+          ProductList()
+        ],
       ),
     );
   }

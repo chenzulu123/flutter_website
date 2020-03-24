@@ -27,7 +27,6 @@ class _AppState extends State<App> {
         if (homePage == null) {
           homePage = HomePage(title: "主页",);
         }
-        print(homePage.title);
         return homePage;
       case 1:
         if (productPage == null) {
@@ -85,7 +84,6 @@ class _AppState extends State<App> {
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         onTap: (index) {
-          print(index);
           setState(() {
             _currentIndex = index;
           });

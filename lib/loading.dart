@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './app.dart';
 
 // 页面加载页
 class LoadingPage extends StatefulWidget {
@@ -16,8 +17,8 @@ class _LoadingPageState extends State<LoadingPage> {
 
     //在页面停顿3秒
     Future.delayed(Duration(seconds: 3), () {
-      print("启动页面");
-      Navigator.of(context).pushReplacementNamed("app");
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => App()));
     });
   }
 

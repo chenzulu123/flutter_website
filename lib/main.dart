@@ -10,9 +10,9 @@ void main() => runApp(MaterialApp(
       // 自定义主题
       theme: mDefaultTheme,
 //      initialRoute: '/app',
-      routes: <String, WidgetBuilder>{
-        "app": (BuildContext context) => App(),
-        "company_info": (BuildContext context) => WebviewScaffold(
+      routes: {
+        "/app": (context) => App(),
+        "/company_info": (context) => WebviewScaffold(
               appBar: AppBar(
                 title: Text('公司介绍'),
                 centerTitle: true,
